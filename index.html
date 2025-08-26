@@ -1,91 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-  <head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MapasLive — Projetos</title>
+  <meta name="description" content="Portal simples para projetos MapasLive: GeoCEP, Overpass Exemplo e Faces2022." />
+  <style>
+    :root{--bg:#f6f9fc;--card:#ffffff;--accent:#0b76ef;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg,#0b76ef22,transparent);padding:28px 20px}
+    .container{max-width:980px;margin:0 auto;padding:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:8px 0 0;color:var(--muted)}
+    nav{margin-top:14px}
+    nav a{margin-right:10px;text-decoration:none;color:var(--accent);font-weight:600}
 
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,
-      initial-scale=1.0">
-    <meta name="description" content="Exemplo de página HTML5 básica">
-    <meta name="author" content="Seu Nome">
-    <title>Página HTML5 Básica</title>
-    <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #007BFF;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav {
-      background: #333;
-      color: white;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 20px;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 10px 0;
+    main{padding:28px 0}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;background:linear-gradient(180deg,rgba(255,255,255,0.7),transparent);padding:20px;border-radius:12px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+    .project a{display:block;text-decoration:none;color:inherit}
+    .project h3{margin:0 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    footer{margin-top:26px;padding:18px 0;color:var(--muted);font-size:14px}
+
+    @media(min-width:800px){
+      .hero{grid-template-columns:1fr 380px}
     }
   </style>
-  </head>
-  <body>
-    <nav> <br>
-    </nav>
-    <main>
-      <section id="sobre">
-        <div align="center"><br>
-          <img moz-do-not-send="true" src="images/Logo_Umbraosm.jpg"
-            alt="logo" width="286" height="80"></div>
-        <h2 align="center">Estamos construindo um novo site! <br>
-        </h2>
-        <div align="center"><b>Visite Nossas Redes Sociais!</b><br>
-          <b>Grupo no Telegram: </b><a moz-do-not-send="true"
-            href="https://t.me/grupoumbraosm">https://t.me/grupoumbraosm</a><br>
-          <b>Youtube:</b> <a moz-do-not-send="true"
-            href="https://www.youtube.com/@umbraosm">https://www.youtube.com/@umbraosm</a><br>
-          <b>Instagram:</b> <a moz-do-not-send="true"
-            href="https://www.instagram.com/umbraosmbrasil/">https://www.instagram.com/umbraosmbrasil/</a><br>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo">ML</div>
+        <div>
+          <h1>MapasLive — Portal de Projetos</h1>
+          <p class="lead">Central com links para projetos GeoCEP, Overpass Exemplo e Faces2022.</p>
         </div>
-      </section>
-      <br>
-    </main>
+      </div>
+      <nav>
+        <a href="https://mapaslive.com.br" target="_blank" rel="noopener">mapaslive.com.br</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="projects" class="card">
+      <h2>Projetos do MapasLive</h2>
+      <p class="lead">Conheça e acesse os principais projetos da comunidade MapasLive.</p>
+
+      <div class="projects">
+        <div class="project card">
+          <a href="https://geocep.mapaslivre.com.br/" target="_blank" rel="noopener">
+            <h3>🌍 GeoCEP</h3>
+            <p>Ferramenta comunitária para busca e visualização de CEPs e endereços a partir dos dados livres do OpenStreetMap. Simples, acessível e aberta à colaboração.</p>
+          </a>
+        </div>
+
+        <div class="project card">
+          <a href="https://overpassexemplo.mapaslivre.com.br/" target="_blank" rel="noopener">
+            <h3>🔎 Overpass Exemplo</h3>
+            <p>Projeto que demonstra como utilizar a API Overpass do OpenStreetMap para consultar e extrair dados geográficos personalizados de forma prática.</p>
+          </a>
+        </div>
+
+        <div class="project card">
+          <a href="https://face2022.mapaslivre.com.br/" target="_blank" rel="noopener">
+            <h3>👥 Faces2022</h3>
+            <p>Iniciativa de mapeamento colaborativo realizada em 2022, reunindo voluntários e instituições para atualizar e qualificar os dados geográficos no OSM.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="card" style="margin-top:18px">
+      <h2>Contato</h2>
+      <p style="margin:6px 0">Entre em contato com a <strong>UMBRAOSM</strong>:</p>
+      <ul>
+        <li>Email: <a href="mailto:contato@umbraosm.com.br">contato@umbraosm.com.br</a></li>
+        <li>Twitter: <a href="https://twitter.com/umbraosm" target="_blank" rel="noopener">@umbraosm</a></li>
+        <li>Facebook: <a href="https://facebook.com/umbraosm" target="_blank" rel="noopener">facebook.com/umbraosm</a></li>
+        <li>Instagram: <a href="https://instagram.com/umbraosm" target="_blank" rel="noopener">@umbraosm</a></li>
+      </ul>
+    </section>
+
     <footer>
-      <p><b>Endereço para Correspondência:</b><br>
-        Rua Frei Matias Tevis, N.285 Sala.1201 -&nbsp; HUB PLURAL)
-        CXPST: 067 - Bairro: Ilha do Leite - Cidade: Recife/PE - CEP:
-        50070-465<br>
-        © 2024 <b>Umbraosm</b> - União dos Mapeadores Brasileiro do
-        Openstreetmap - Todos os direitos reservados.&nbsp; <br>
-        <b>E-mail: </b>contato@umbraosm.com.br<br>
-      </p>
+      <div class="container">
+        © 2025 MapasLive — Página gerada para hospedar links dos projetos. Desenvolva e personalize como desejar.
+      </div>
     </footer>
-    <br>
-    <br>
-  </body>
+  </main>
+</body>
 </html>
